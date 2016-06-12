@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Nepal Standard Industrial Classification (NSIC) Codes</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<head>
+<body>
+<div class='container'>
+<div class='jumbotron'>
+<h1>Nepal Standard Industrial Classification (NSIC) Codes</h1>
+</div>
+<table class="table">
+<thead>
+<tr style='background:#eee'>
+<td colspan=2>Source: ocr.gov.np</td>
+<td>
+<span style="font-weight:normal;float:right">Maintained by : <a href="https://nepalese.github.io">nepalese.github.io</a></span>
+</td>
+</th>
+<tr><th>Code</th><th>English <small>(If available)</small></th><th>Nepali</th></tr>
+</thead>
+</table>
+</div>
+<script type="text/javascript">
+  $(function(){
+    $.getJSON("nsic-codes.json", function(data){
+      var body = $("table");
+      $.each(data, function(index, item){
+        var dom = $("<tr>");
+        $(dom).append("<td>" + index + "</td>");
+        $(dom).append("<td>" + item.en + "</td>");
+        $(dom).append("<td>" + item.ne + "</td>");
+
+        body.append(dom);
+      });
+    });
+  });
+</script>
+</body>
