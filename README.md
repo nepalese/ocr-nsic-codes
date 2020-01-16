@@ -3,8 +3,9 @@ During company registration, OCR (Office of the Company Registrar) asks for NSIC
 
 - This repo maintains the NSIC Codes for reference.
 
-__Data Source__ : [http://ocr.gov.np](ocr.gov.np)
-__Last Updated__: 2020/01/16 (माघ २, २०७६)
+## Credits
+- __Data Source__ : [http://ocr.gov.np](ocr.gov.np)
+- __Last Updated__: 2020/01/16 (माघ २, २०७६)
 
 ### Browsable version
 http://nepalese.github.io/ocr-nsic-codes
